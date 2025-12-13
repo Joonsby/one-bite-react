@@ -4,13 +4,21 @@ import Viewer from './components/Viewer';
 import Controller from './components/Controller';
 
 function App() {
-  const [number,setNumber] = useState(0);  
+  const [count, setCount] = useState(0);
+
+  const onClickButton = (value) => {
+    setCount(count + value);
+  }
 
   return (
-    <div style={{padding:'5%'}}>
+    <div className = 'App'>
       <h1>Simple Counter</h1>
-      <Viewer number={number}/>
-      <Controller/>
+      <section>
+        <Viewer count={count}/>
+      </section>
+      <section>
+        <Controller onClickButton={onClickButton}/>
+      </section>
     </div>
   )
 }

@@ -1,16 +1,11 @@
 import {useState} from 'react';
 
-const Viewer = ({number}) => {  
-
+const Viewer = ({count}) => {    
   return(
-    <>
-      <div>
-        <h1>현재 카운트 : </h1>
-      </div>
-      <div>
-        <p>{number}</p>
-      </div>
-    </>
+    <div>
+      <div>현재 카운트 :</div>
+      <h1>{count}</h1>
+    </div>
   )
 }
 export default Viewer;

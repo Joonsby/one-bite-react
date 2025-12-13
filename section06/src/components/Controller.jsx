@@ -1,20 +1,17 @@
 import {useState} from 'react';
 
 
-const Controller = ({number,setNumber}) => {
-  const changeNumber = () => {
-    console.log(number);
-  }
+const Controller = ({onClickButton}) => {    
 
   return(
-    <>
-      <button onClick={changeNumber} value="-1">-1</button>
-      <button onClick={changeNumber} value="-10">-10</button>
-      <button onClick={changeNumber} value="-100">-100</button>
-      <button onClick={changeNumber} value="100">+100</button>
-      <button onClick={changeNumber} value="10">+10</button>
-      <button onClick={changeNumber} value="1">+1</button>
-    </>
+    <div>
+      <button onClick={() => onClickButton(-1)}>-1</button>
+      <button onClick={() => onClickButton(-10)}>-10</button>
+      <button onClick={() => onClickButton(-100)}>-100</button>
+      <button onClick={() => onClickButton(100)}>+100</button>
+      <button onClick={() => onClickButton(10)}>+10</button>
+      <button onClick={() => onClickButton(1)}>+1</button>
+    </div>
   )
 }
 
